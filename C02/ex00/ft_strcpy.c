@@ -1,21 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: nespana- jboumal pacruz                    +#+  +:+       +#+        */
+/*   By: pacruz <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/13 09:09:58 by nespana-          #+#    #+#             */
-/*   Updated: 2021/11/13 14:23:05 by pacruz           ###   ########.fr       */
+/*   Created: 2021/11/18 16:07:31 by pacruz            #+#    #+#             */
+/*   Updated: 2021/11/18 17:05:45 by pacruz           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include<unistd.h>
 
-void	rush(int a, int b);
-
-int	main(void)
+char *ft_strcpy(char *dest, char *src)
 {
-	rush(5, 3);;
-	return (0);
+	int	i;
+
+	i = 0;
+	while(src[i] != '\0')
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	dest[i] = '\0';
+	return dest;
 }
